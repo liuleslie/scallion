@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Onion Offshoot: Scallion</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <base target="_blank">
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png"> -->
+  <!-- <link rel="stylesheet" href="onion-style.css"> -->
+  
+  <!-- Hand-writing this on May 20 at 22:10. Following main .css styles, with inline and pagewise styling here to override. -->
+  <!-- Picked up again on May 22 at 11:55.
+
+  index: persistent. 
+  generous, access as an ethic.
+
+  Team: Laurel advising, Dani on desire theory assist, Leslie on conversation/interviews, main making.
+
+  Structured as a series of conversations:
+
+begin with a minifesto (theory on longing [to bridge insurmountable gap] as tech dev currency)
+~~~ interface: LLM interaction paradigms
+~~~ 
+
+
+
+
+  cowriter        Daniela Bologna
+  editor          Laurel Schwulst
+
+  eros            Rue Yi
+  LLM/literacy    Robert Rapoport
+                  Sireesh + Lab
+  
+
+
+
+
+5/15
+Made Captcha patent proposal / report
+Working on mobile game ads twine
+Research project w/professor (indesign plugin) auto-layouts book	
+Seeing like a rover
+
+5/22
+Last week:
+    Talked to security / protocol researcher
+    Lots of other progress around captcha and onion projects
+Next week:
+    A publish-ready form of the manifesto
+    Second text(?) that is more about conversational interfaces
+    A working P5 sketch for the Captcha side 
+    Read OpenAI’s paper on TTS models and understand how generative audio actually works
+
+
+
+
+
+
+  
+  The general thinking behind this is a single scallion blade/leaf (visualized below, lengthwise)
+
+                <================i===]
+  
+  we unroll vertically, starting from the ends (green) and ending with the roots (white), which embody the messiness of the collaboration
+
+  Principles
+  𐫱 respect for the reader
+  𐫱 websites are sensory organs, temporary bodies
+  𐫱 accessibility is generosity too (via Laurel)
+  𐫱 earnestness first
+  𐫱 inquisitive: steered towards question-asking
+  𐫱 seamful: marginalia; Dani’s “ant in the fold of clothes: how can we be the ant? (re: hidden texts, pleats, marginalia)”
+
+  Style Guide
+  𐫱 decay and compost, loving attitude towards compression
+  𐫱 interpretive agency
+  𐫱 multidimensional (after CSS) citation
+
+
+
+
+
+  
+  -->
+
+  <style>
+    
+    #t1 {color:white;}
+    #t2 {color:#BCD6AC;}
+    #t3 {color:#9DC284;}
+    #t4 {color:#78A65A;}
+    #t5 {color:#48742C;}
+    #t6 {color:#314D1C;}
+    #t0 {color:darkkhaki} /* snow, honeydew/mintcream, ivory, floralwhite, whitesmoke (very/too gray) */
+    #tm {color:red}
+    #preamble {color:olivedrab}
+    #portals a {text-decoration:none;transition:0.5s;}
+    /* a:hover {opacity:0;transition:0.2s;} */
+    #portals a:hover {background-color:khaki; transition:0.1s; padding-right:3em; padding-left:1em;}
+    
+    
+    html { min-height:100%; font-family:monospace; font-size:18px; line-height:1.167em; -webkit-font-smoothing:antialiased; }
+    body { background-color:rgb(224, 220, 220); color:black; margin:0 0 2em 0;} /* background: linear-gradient(180deg,white 25%, #BCD6AC 50%, #9DC284 75%, #78A65A 80%, #48742C 90%, #314D1C 100%); */
+    article, main {padding:1em;display:block;position:relative;}
+    a {text-decoration:none; color:brown}
+    a:hover {color:black}
+
+    section { display:flexbox;flex-direction:column }
+    hr {border-top:rgb(175, 186, 108) dotted 2px; border-bottom:none}
+    span.srctitle {text-decoration: 1px solid black underline;text-underline-offset: 0.2em;}
+    span.highlight {background-color:khaki;mix-blend-mode:hard-light}
+    nav {margin-bottom:1em}
+
+    /* MAIN WORKING BAG! */
+    /* #mainmain {display:grid;grid-template-rows:4fr 1fr} */
+    #bag3 { display:grid;grid-template-columns:6fr 4fr;overflow-y:scroll; overflow-x:hidden;
+      border-top:1px darkkhaki dotted; 
+      border-bottom:1px darkkhaki dotted;
+      height:80vh;
+    }
+    #body-text, #digits-margins {padding:0 1em 0 1em;line-height:1.6em;}
+    #body-text img {width:100%;display:block;margin:2em auto 0 auto;}
+    #body-text img.med {width:75%;}
+    #body-text img.small {width:50%}
+    #body-text p.caption {font-size:0.75em;text-align:center;margin-bottom:2em;line-height:1.2em;}
+    #bag3 h1 {
+      font-size:1em; font-weight:normal;text-align:center;
+      position:sticky;top:0;padding:0.125em 0.125em 1em 0.25em;margin-top:4em;
+    }
+    #body-text h1 {background:linear-gradient(180deg, rgba(224, 220, 220,1) 0%, rgba(224,220,220,0.75) 40%, rgba(224, 220, 220,0) 100%);}
+    #body-text blockquote {margin-left:4em; background-color:rgb(214,210,210);padding:0.25em 0.5em 0.25em 0.5em}
+    #body-text sup { top:0; font-size:0.65em; font-weight:bolder; }
+
+    #body-text sup:hover { background-color: rgb(177, 214, 102) }
+    #footnotes .footnote-to:hover { background-color: rgb(177, 214, 102) }
+    #footnotes span.srctitle {text-decoration: 1px solid black underline;text-underline-offset: 0.2em;}
+
+
+    #digits-margins h1 {background:linear-gradient(180deg, rgba(215,215,203,1) 0%, rgba(215,215,203,0.75) 40%, rgba(215,215,203,0) 100%);}
+    #digits-margins { background-color:rgb(215, 215, 203)} /* rgb(200, 199, 182 */
+    
+    #carrier-bag { border:1px salmon solid; }
+
+    pre {white-space:pre-wrap}
+    
+
+  </style>
+  </head>
+  <body>
+    <main>
+
+      <!-- <pre id="portals"><a id="t6" href="">_▁▂▃▄▅▆▇██████</a><a id="t5" href="">▓▓▓</a><a id="t4" href="">▒▒▒▒▒▒</a><a id="t3" href="">░░░░░░░</a><a id="tm" href="">   ▐</a><a id="t0" href="">    &#123; </a></pre> -->
+      <!-- <pre id="portals"><a id="t0" href="">    &#123; </a><a id="tm" href="">   ▐</a><a id="t3" href="">░░░░░░░</a><a id="t4" href="">▒▒▒▒▒▒</a><a id="t5" href="">▓▓▓</a><a id="t6" href="">██████▇▆▅▄▃▂▁_</a></pre> -->
+
+<!-- 
+█   
+▓   
+▒   
+░   
+X   process, notes
+ -->
+
+
+
+      <nav>
+        <a href="#" target="_self">Index</a> / Scallion: Minifesto
+      </nav>
+      
+      <div id="mainmain">
+        <div id="bag3">
+          <section id="body-text">
+            <h1 style="margin-top:2em">Context</h1>
+            <p>On August 19, 2021, a Wikimedia user uploaded a picture of onion peels to the Commons, elegantly titled “Absence of essence.”</p>
+            <img class="med" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Absence_of_essence.jpg" alt="">
+            <p class="caption">Tn.kuvat, “Absence of essence,” on <a href="https://commons.wikimedia.org/wiki/File:Absence_of_essence.jpg">Wikimedia Commons</a>.</p>
+            <p>When beholding the image — so thoughtfully photographed — there is a delicate courage in the (now long gone) onion that resonates with the ethos of <a href="https://www.are.na/laurel-schwulst/the-life-and-death-of-an-internet-onion"><span class="srctitle">The Internet Onion</span></a>.</p>
+            <img class="small" src="https://lh7-rt.googleusercontent.com/sheetsz/AHOq17G4ePuxfIbZBJAQuREEuou2fM8EUhLA88_oqJu8oaYapzrXeACq82xnRU5Dd3nzikb0Y0z-SwQwHfY9jd1HrxFzL88txMAbFlCZEaLUSvMhBwVVFs215J_feff76smt2zbnAnM?key=8EkQqLfJQ2L7dnwAI3xq78CP" alt="">
+            <p class="caption">Internet Onion logo.</p>
+            <p><span class="srctitle">The Internet Onion</span>, orchestrated by Laurel Schwulst and company, honors the emergence and practice of love online; it is a perennial webzine anthology that invites us to consider “what expressing ‘real’ love or affirmation [is] about.” Gathering various perspectives tenderly attentive to the interpersonal, <span class="srctitle">The Internet Onion</span> is a testament to the work that love demands, much in the same way a hearty stew requires slow cooking over time.</p>
+            <p>Regarding the onion, we appreciate this wonderful vegetable (and its extended Allium family) not only for its flavor but also for its structure, echoed in many things: as a reflection of the anatomy of HTML, as an analogy to gift wrapping paper, as a loose metaphor for layered, nestled secrets. Setting our focus on the ecology of the online, we sense a restless turning about and loosening in the soil that serves as the site for our conversations. We recognize this turbulence as ubiquitous data capture for machine learning that undergirds contemporary infrastructures, intersecting most potently with how we practice love online.</p>
+            <img class="med" src="https://lh7-rt.googleusercontent.com/sheetsz/AHOq17H-kvmlny0CCHCw36_kudYXc2ckKTKoyxeDmVT04BnHopxlgHOZARrUM0RxlYNluSHHTCQXRTrZMHp7Jbr932uhTAgOqV3e2ArVqsBt1OU-vHFvTbbTsJCjv_cxMhoiSkzcJFg?key=8EkQqLfJQ2L7dnwAI3xq78CP" alt="">
+            <p class="caption">vanessa lollipop, “green onions,” on Flickr.</p>
+            <p>To trace these emergent threads, we introduce Scallion,<sup><a id="footnote-from-1" target="_self" href="#footnote-to-1">[1]</a></sup> an offshoot of <span class="srctitle">The Internet Onion</span>. Scallion wonders about the ever-intertwining relationships between intimacy, connection, and (our) ubiquitous data capture in a culture governed by and entangled in machine learning and algorithms. A sibling of the onion, the scallion is used in cooking all over the world. Mild in taste, the scallion’s delicate yet versatile structure offers several ways to cut and slice it as a garnish. As we wrestle with the intricacies of the culture and norms of machine learning, we take the scallion as a model for facilitating conversation that is open-ended, flexible in tone and approach. Rather than demanding absolute loyalty to our hypotheses, the clippings here are yours to pick apart.<sup><a id="footnote-from-2" target="_self" href="#footnote-to-2">[2]</a></sup></p>
+      
+            <h1>On Love</h1>
+            <p>To begin, our approach to discussing terms like “love” and “artificial intelligence” is the same one we use when approaching any meaning of any word. Language is a nebulous technology: to simply try to speak our thoughts is already to participate in an act of translation. Words are merely symbols — channels through which we gesture towards and attempt to transmit a momentary truth or sensation.<sup id="footnote-from-3"><a target="_self" href="#footnote-to-3">[3]</a></sup> Meaning is not static matter.<sup><a id="footnote-from-4" target="_self" href="#footnote-to-4">[4]</a></sup> No word simply <em>is</em>, and so no word can ever just <em>be</em> in total perpetuity.<sup><a id="footnote-from-5" target="_self" href="#footnote-to-5">[5]</a></sup> </p>
+            <p>To expect a static meaning for any word is already unlikely, but to expect one for love is even more so. Our approach towards definitions is most of all reconfirmed by a shapeshifting power such as “love.” Most cannot even agree on whether it is a feeling, a verb, a value, a chemical, a mindset, a destination, a medium, a message… let alone determine what its parameters and windows for manipulation might be. That being said, we embrace its gaseous nature and move forward with the proposition that love is merely that — interdisciplinary. We dispel the need to define a term with as much plurality as “love.” Instead, we move forward with the hypothesis that love is a natural resource, and like all others, it too can be mined. Machines are mined from elemental resources — no technology exists in a void; the software and hardware always comprise and are the consequences of natural, social, and technical resources and relationships. Data gets mined, labor gets mined — even technological metaphors are plundered from our natural world, whether it be reimagining websites as gardens, referring to server farms as the Cloud, or even the term “web” itself. And that which can be mined can be exploited.</p>
+            <p>To consider love as an elemental ore, then, means that while love in its true form remains amorphous and indeterminant, we can still extract from it different, conflicting conceptions for manipulation in accordance with personal agendas, whether for harm or for good, for power and/or for control. Depending on this, one might approach love as a tool or technology itself, as a message other technologies carry, as an essence that can trespass and trickle through existing socio-technical frameworks, or simply as an exploitable conduit or promise. When it comes to how love figures in technology, it is important to note that the large language models (LLMs) that enable our encounters with consumer-marketed artificial intelligence (AI) are fundamentally love-agnostic — human-agnostic, earth-agnostic, morality-agnostic. While the gluttonous mechanisms of endless, panoptic data mining can exploit human talents, contaminate the earth, and capitalize on our innate longing for love, within the logic of accelerationist AI development there is no right or wrong; there is no monochrome thinking, or even gray, because there is no color. The same cannot be said for the biases of their makers and maintainers; but to the unthinking, unblinking prosthetic “mind” that is said to possess intelligence, no meanings are real — they are but enforced patterns drawn from probabilistic distributions, nothing but desire paths that form in grass. An LLM chatbot’s<sup><a id="footnote-from-6" target="_self" href="#footnote-to-6">[6]</a></sup> interpretation of a concept like love is entirely influenced by the workers, engineers, researchers, marketers, regulators, and stakeholders across the AI supply chain, as well as the outlying sediments, biases, and data that enable this technical advancement, which are then echoed as predictions of the type of answer the user is seeking. In this sense, we recognize that all technology is porous — it absorbs the values of the collective (un)conscious.</p>
+            <p>That being said, it is also important that we acknowledge the limitations of any metaphor, much like with all language — both in the case of love as an ore and in the aforementioned example drawing from the human mind to frame fundamental understandings of artificial intelligence. In <a href="https://mail.cyberneticforests.com/artificial-intelligence-is-a-compost/"><span class="srctitle">Artificial Intelligence is a Compost Heap (Ideally)</span></a>, Eryk Salvaggio likens the use of extended metaphors to building the Tower of Babel, doomed to collapse:</p>
+            <p><blockquote>Metaphors matter because they shape the way we build but also what we build toward. They steer us toward consistency of the model,<sup><a id="footnote-from-7" target="_self" href="#footnote-to-7">[7]</a></sup>  reward clever connections, encourage neat analogy over recognizing unique properties of a system. Along the way, we build a Tower of Babel, a central spire around which we understand a thing. Metaphors falsely transform into references. Then, inevitably, the tower collapses as we hang too much imagination on those metaphors, straying from the thing that is. We lose the thing to the thing we imagine it to be like.</blockquote></p>
+            <p>There are countless ways to reimagine how we talk about LLMs and artificial intelligence in general. For example, Salvaggio suggests a compost system intelligence metaphor in place of our existing one, which he refers to as a “solitary brain-model”<sup><a id="footnote-from-8" target="_self" href="#footnote-to-8">[8]</a></sup> — [a compost intelligence is] one that resists monopoly and prioritizes organic decomposition, intra-system conversation and self-regulation over self-sufficiency and an orderly system of retrievability. In our case, we call into question what the very telos of AI expansion is, and whether the driving force behind the entire system and its allure has ever really been knowledge-exchange.</p>
+          
+            <h1>Motivating Forces</h1>
+            <p><span class="highlight">We propose that the currency at the heart of the AI industry is longing, rather than knowledge.</span> When we interface with LLMs and ask chatbots a question, it does not actually matter what is on the other side. It is the mere gesture of building the bridge to get there that does: the telos of all AI and technological expansion is to resolve all gaps introduced by the finitude of human experience. It has never been about the information itself, but rather about predictive models that can fill the hole — any hole. Rather than intelligence expansion, the foundational basis for machine learning is simply the latter part: expansion. Expansion — longing’s footman — an unquenchable, insatiable, ineffable, helpless urge to make the intangible tangible, a reaching for catharsis. To reach the final frontier for the sake of reaching the final frontier. However, there will always be the next, more final frontier. The next, more meaningful truth. In this foredoomed, sisyphean drive lies the essence of longing, which may also be the essence of humanity.</p>
+            <p><span class="highlight">We are committed to the understanding that all pursuits of knowledge are exercises in longing.</span> Beyond the technological, there is something inherently limerent about the strive to learn. As shared by Instagram user and former meme page admin <a href="https://www.are.na/block/15961016">@sadboyeckhart</a>, to seek an answer to a question is to seek more questions:<sup><a id="footnote-from-9" target="_self" href="#footnote-to-9">[9]</a></sup></p>
+            <p><blockquote>The same light that brings the leaves of the trees outside to shimmer with color also casts shadows across the yard. Every conclusion reached invites more questioning, for truth is never an end in itself, but a living reality. Always changing. All methods of inquiries are only futile exercises in longing, in thirst, and there is no peace within any of it.</blockquote></p>
+            <p>At the heart of everything lies an unavoidable truth: nothing is more human than longing. What sets us apart, other than language? Why did we turn to language to begin with? What is it about mankind and striving? As written earlier, language has always been an act of translation, borne of a yearning to understand, or better yet, to be understood. Loving to the point of invention, of discovery, of reinvention, of rediscovery, every time we look up, every time we look beyond: longing.<sup><a id="footnote-from-10" target="_self" href="#footnote-to-10">[10]</a></sup> Whether it be biological wiring, or a self-administered search for meaning and sense-making: longing. More importantly, we long to long. Core to the human condition, countless philosophers have tried to tell us what we already intuit. Longing is not learned, it simply is. We long for the sake of longing. Jacques Lacan wrote about the desire of desire itself, Byung-Chul Han of the agony of Eros, and <a href="https://www.are.na/block/13405209">Zygmunt Bauman wrote</a> about how our goal is never actually the object of our longing but the act of longing itself: “we desire and seek a realization that usually consists of a constant becoming, in a permanent disposition of becoming.”</p>
+
+            <h1>Unbridgeable Distance</h1>
+            <p><span class="highlight">All longing-driven relationships — whether with each other, with an idea or a research practice, or with ourselves — are punctuated by distance.</span> There is a fragile balancing act between longing and presence, with perhaps all relationships existing somewhere on the spectrum at any given time. Longing, of course, focuses on what isn’t in a relationship (yet). It trails after that which is just out of reach; the distance still left between the two participants; the consistent pursuit of knowledge; the acknowledgment that you are still learning more about your loved ones with every new day — that one can never truly be known. Presence, or attention, on the other hand, focuses on what you already know and hold; the distance already traveled. So, in a way, presence is the opposite of longing, although they are both an awareness of coexisting parts of the same situation. But longing is not absence, as much as it is a lack of presence. Absence is a shade of presence too: a silhouette of what is missing from a space is a proof of its existence. Longing cannot speak to the existence of its desired object because it is the state of reaching for a silhouette that you cannot envision. The distance can never be closed absolutely or in perpetuity, regardless of illusions that suggest otherwise. At different intervals, one side of the coin glints more brightly than the other, and greater feelings of either closeness or separation emerge.</p>
+            
+            <h1>Crush</h1>
+            <p>So many nebulous interpretations of allied terms can also revolve around the geographies of human relationships and distance — grief; love; desire. Grief manifests as a longing for love, ill-fated in its incapacity to reach any state of presence. Similarly, is the more carnal desire some kind of misplaced love with no want for presence? Or is desire longing when the distance between both subjects also manifests physically — or purely physically? If longing is our form of sense-making, is the state of boredom simply people yearning for enchantment and desire? A longing for a reason to long itself? Factoring in all the above, it is hard to situate LLM chatbots on the distance spectrum, and distinguish whether they can ever provide a sense of presence, as much as they can attention or pseudo-desire. As much as they can provide companionship to temporarily fill one form of lack, these chatbots cannot fulfill the promise of physical distance-bridging that seems so integral to desire.</p>
+            <p>All the different emotions and iterations orbiting distance culminate in what we call “crush culture.” We reverberate <a href="https://www.thebeliever.net/larissa-pham-crush/">Larissa Pham’s notion</a> that a crush is simply a lack of information:</p>
+            <p><blockquote>The crush exists at a point of distance. The less I know of you, the better, because then I can safely project my affections onto you. I can begin to write a story, a catalog of intimacies, a script we will inevitably fail.</blockquote></p>
+            <p>Limerence between humans is when you fill in the gaps — much like with predictive models and LLMs — and the idea of building the bridge is the object of your longing, more than whatever lies on the other side of it. Clichés earn their reputation after being repeatedly correct, because as it turns out, it actually has always been about the chase. Do we even want to find what we are looking for? Like all pursuits of knowledge, it’s more about getting there than what “there” actually is. Distance accounts for ambiguity, and ambiguity provides ample breeding ground for projection, imagination, and idealization. Borne of purposelessness or boredom perhaps, the gap is now ours to fill as we please, with whichever non-answers elicit more emotional response — achieved through a fragile choreography of control, restraint, and lack. Crushing is to make a tool of our limerent object, a tool we use in order to feel something. The longing experienced within a crush propels us in either of two contradicting directions, or both: an outward longing, and an inward kind.</p>
+            
+            <h1>Crushing: Outward, Inward</h1>
+            <p>The outward-reaching manifestation aligns with the expression of longing discussed earlier. The gap you are bridging is all that is unknown. You simply want to learn more, although in doing so are setting up the conditions for the very demise of the crush state. You seek to bypass translation entirely, something sustained intimacy cannot even achieve, and a total, impossible eradication of distance between yourself and the object of your affection, or rather your present pedestalled understanding of them, filling it by any means or assumptions. A question arises: does a crush renounce and flatten the richness of another’s interiority? Or deepen it beyond what it actually is, projecting illusions onto it? Either way, both are dehumanizing, with neither standing at the ground level alongside you. With time they will collapse on themselves like a Tower of Babel, but not before losing our crush to what we imagine our crush to be like. In place of a fallen crush, a real connection can sprout — one with shared values, where you recognize your humanity as equal, rather than greater or shallower. Believing in the richness of another's interiority does not denounce your own, but you should make no comparative assumptions of eithers’ depths or substance. Otherwise, the idealized version of the crush evaporates, and you are left with a stranger. But until then, they are no stranger, but the one you understand best.</p>
+            <p>In admiring and seeking proximity to that which you desire, you also admire and seek proximity to the world they are part of. And therein lies the crux of the other type of longing present in crushes: a longing for what you lack in yourself. The crush and its gaps then function as a different tool for projection. As Catherine MacCoun wrote in <a href="https://www.are.na/block/31071605"><span class="srctitle">On Becoming an Alchemist</span></a>, “when you become infatuated with someone you hardly know, what you have actually fallen in love with is an unrealized potential in yourself. You have a big crush on what you yourself secretly wish to become.” They may possess character traits we wish we could cultivate; social skills and practical talents; a community or lifestyle. Regardless, we recognize that people are portals. How we move in life depends most of all on our environment, and environments are largely constructed by those we surround ourselves with. These people propel us forward, towards different futures and timelines, almost akin to leaping into new dimensions. Or, when a crush is a proximity to that which you lack; all the parts of life that left you longing, it can at least grant us the illusion that something borrowed is actually ours, if we spend sufficient time in their presence.</p>
+            <p>This longing for an untapped, truer self is another core facet of the human condition. In medieval times, St Augustine had already written “interior intimo meo et superior summo meo” — that “there is One within me who is more myself than myself”, although also in allusion to God. A threshold no longing can touch, more you than you, more true than your truth. But there are countless ways we grant ourselves the permission to imagine the deepening of our interiority. There is a sense that someone’s excitement about you will bring you closer to your own. Feeling seen by the other becomes a rediscovery of oneself. And so in our longing towards others, we are also longing for their understanding of us to make us in exchange, and for them to mend gaps in our identity the same way we do for the perceived image we have of them. To bring us closer to ourselves. Particularly when it can be so easy to mistake desire for curiosity — in ourselves, yes, but especially in the other.</p>
+
+            <h1>Interfacing Selves through Others</h1> <!-- ; various proxies to determine bounds of self — whether people or tech -->
+            <p>This tendency is single-handedly one of the greatest, most seductive allures we sense in LLM chatbots — because we see ourselves through the eyes of others, even the non-vision of machines. Mankind has always scanned the world for symbols to unlock its mysteries. We invest in magical thinking, worship false gods, and put our trust in omens to decide our fate when we mistrust ourselves. Everything is a message — gestures hiding behind gestures; truth hiding behind truth. It is easier being told what the meaning is, especially if it comes in the form of faith-strengthening, communal mythologies. We want to be told who we are — because we experience ourselves through the eyes of others, even machines.</p>
+            <p>No art student goes through their first semester of college without hearing the echoing of John Berger’s words, “women watch themselves being looked at”. “Girls want one thing and it’s to be described,” agrees <a href="https://www.tiktok.com/@danyella5000/video/7472111260339834143">one TikTok video</a> that amassed nearly 1,500 comments. There is an echo chamber of viral Twitter and TikTok content that regurgitate the same lines. But they harness interactions for a reason. They reveal something about us, and about how we want to be perceived, and about how we want to be perceived <em>while wanting to be perceived</em>. BuzzFeed quizzes, YouTube astrology pick-a-card readings directed at a nameless audience that can include both everyone and nobody, take what resonates and leave what doesn’t.</p>
+            <p>And in comes a machine that tells me who I am. Machine learning models offer a long-awaited, seductive aura of authority that makes them the perfect soothsayer for objective truth. So many mythologies — crafted by whom? — present them as neutral, sanitized, devoid of any residue that can interfere with the distilled honesty of the world you seek. As <a href="https://digital-scum.glitch.me/">Jina Hyun writes</a> of voice assistants,</p>
+            <p><blockquote>The techno-clean body is constituted by the erasure of human embodiment, its neutralized voice, manufacturable reproducibility, and processing of information. It is an esoteric body without differentiation that convinces the consumer of a universal, default condition that is in reality, only beneficial to a certain society.</blockquote></p>
+
+            <h1>Algorithms as Fate</h1> <!-- towards obliteration -->
+            <p>We long for new truth, whether about the world or ourselves, and the AI industry sells itself as a purveyor of it. We consult LLM chatbots to simulate escaping into the vastness of another’s interiority but is it actually our own? After all, how can you become more yourself when the AI interface is not actually the window we mistake it to be, but a mirror, or to be explicit, Narcissus’ pond? You glimpse traces of yourself in the dataset, its facture a product of mass web scraping, exploitation, reenacted violences on invisibilized laborers, and the physical towns selected to power all this computation. Is this technology merely an excuse; a conduit? To reawaken you and grant you permission to believe what you already are? Do we simply use AI to access parts of ourselves we are not in touch with, whether we simply don’t know how to get to them, or are not aware they are even ours? Maybe if you caressed the water gentler, tried to prod at its surface a bit, it might give way, helping you transcend and discard your dopamine-addled twenty-first century brain in favor of this disintegrated, all-encompassing, soothsaying technology.</p>
+            <img class="small" src="https://lh7-rt.googleusercontent.com/sheetsz/AHOq17Ga0vSHtVYyLR9Wg8NJRDILqO6FdTEMSXto92NIywp1_HDHHb26MVDrGnbb8hO1uCkEMrR-ytmY0yX5-NQbpv1FhmEP38eNE0oMStcuy6LT7Ysl2g1jodL7wznc7Km_a9bnZw" alt="">
+            <p class="caption">Douglas Main, “Google Protects Its Undersea Fiber Optic Cables… From Sharks,” in <a href="https://www.popsci.com/article/science/google-protects-it-undersea-fiber-optic-cables-sharks/">Popular Science</a>.</p>
+            <p>Networks of ores to be mined, whether data, elemental, metaphorical, or emotional. Networks of stories, networks of underground internet cables physically connecting us to each other and to servers and to data workers on other continents. We turn to love and technology for the same reason: to transcend singularity.</p>
+            <p>To fully understand yourself and your parameters as an individual, you would have to cease to be confined to them, and transcend to a state of omniscience. Whether objectification, datafication, or some other way to splay yourself across a page, a dataset, an essay. Long before chatbots activated the parts of our minds that we struggled to locate ourselves, we were already practicing this form of relational sensemaking. How can we not, when meaning is relational? Everything is self-referential, and we live in the margins of one another. Life is what happens in the margins. Colleagues and friends bring their own self-formed perspectives and introduce seeds and fodder for fresh thought. “The need of human beings to transcend ‘the personal,’” <a href="https://www.are.na/block/21924476">Susan Sontag wrote</a>, “is no less profound than the need to be a person, an individual. But this society serves that need poorly.” If our current enchantment with LLMs is a way to enact our longing, are there folk practices we can develop to practice this desire that’s attentive to the intricacies of data collection? How might a meaningful, considered, and care-full encounter with LLMs take place?</p>
+          </section>
+          <section id="digits-margins">
+
+            <!-- 
+
+            <sup><a id="footnote-from-x" href="#footnote-to-x">[x]</a></sup>
+            <a id="footnote-to-x" href="#footnote-from-x">&lt; [x]</a> 
+            
+            -->
+            <h1 style="text-align:center;margin-top:2em;">—— Notes ——</h1>
+            <pre id="footnotes">
+<a target="_self" class="footnote-to" id="footnote-to-1" href="#footnote-from-1">&lt; [1]</a> 
+Scallion Working Group repository on <a href="https://www.are.na/scallion-working-group/scallion">Are.na</a>.
+<hr><a target="_self" class="footnote-to" id="footnote-to-2" href="#footnote-from-2">&lt; [2]</a> 
+With thanks to the <a href="https://mgsantaclara.ucanr.edu/garden-help/vegetables/green-bunching-onions/#:~:text=The%20Basics,before%20they%20form%20a%20bulb">UC Master Gardeners of Santa Clara County, CA</a> for gardening reference.
+<hr><a target="_self" class="footnote-to" id="footnote-to-3" href="#footnote-from-3">&lt; [3]</a> 
+Also see Carl Jung, <span class="srctitle">Man and His Symbols</span>.
+<hr><a target="_self" class="footnote-to" id="footnote-to-4" href="#footnote-from-4">&lt; [4]</a> 
+Michael Reddy, “<a href="https://www.are.na/block/14588445">The Conduit Metaphor: a case of frame conflict in our language about language</a>.”
+<hr><a target="_self" class="footnote-to" id="footnote-to-5" href="#footnote-from-5">&lt; [5]</a> 
+This impacts the audience as much as it does the author. Much like how Gilbert Simondon wrote about information-singularity within second-order cybernetics, we also consider that the position of the receiver is a constitutive part of the information itself. We acknowledge the audience’s interpretation as an integral piece of the information itself, as much as you expect the writer’s intent to be. The same applies to the stories we tell ourselves, and the metaphors they operate under. It is impossible to draw curtains/borders between our world of worlds always blurring together.
+<hr><a target="_self" class="footnote-to" id="footnote-to-6" href="#footnote-from-6">&lt; [6]</a> 
+“Chatbot” is used very loosely here, in the colloquial sense.
+<hr><a target="_self" class="footnote-to" id="footnote-to-7" href="#footnote-from-7">&lt; [7]</a> 
+We loosely interpret Salvaggio’s “model” here as referring to “mental model.” 
+<hr><a target="_self" class="footnote-to" id="footnote-to-8" href="#footnote-from-8">&lt; [8]</a> 
+In a Western history of artificial intelligence, early approaches of symbolic AI model the human brain and cognitive processes through rules-based reasoning. This paradigm was later supplanted by machine learning, which instead prioritized pattern recognition from data-driven approaches. Data mining/ML parlance refers to information as the amount of clarity a description of data patterns offers, whereas knowledge is roughly similar to expertise gained from experience.
+<hr><a target="_self" class="footnote-to" id="footnote-to-9" href="#footnote-from-9">&lt; [9]</a> 
+Curiosity is a life force.
+<hr><a target="_self" class="footnote-to" id="footnote-to-10" href="#footnote-from-10">&lt; [10]</a> 
+There is loving to the point of invention, and then there is loving to the point of reimagining what is already real. If we are to have to coexist on this earth with these giants of smoke and mirrors, what is a way to interact with the illusion acknowledging it for what it is, if at all? Can you interact with the illusion in a way which addresses who is behind the curtain? Does it require a different vantage point? A different illusion?
+            </pre>
+            <h1 style="text-align:center;">—— Scribbles ——</h1>
+            <pre>
+
+            </pre>
+  
+          </section>
+        </div>
+        <!-- <div id="carrier-bag">carrier here</div> -->
+      </div>
+      
+
+
+
+
+
+
+
+    </main>
+    
+
+  </body>
+</html>
